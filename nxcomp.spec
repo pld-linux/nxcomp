@@ -5,7 +5,8 @@ Version:	1.3.2_4
 Release:	1
 License:	GPL
 Group:		X11/Libraries
-Source0:	http://www.nomachine.com/download/snapshot/nxsources/%{name}-%(echo %{version} | tr _ -).tar.gz
+Source0:	http://www.nomachine.com/download/nxsources/%{name}/%{name}-%(echo %{version} | tr _ -).tar.gz
+# Source0-md5:	1790feafa93c3ca58af117ab6f1f5bca
 URL:		http://www.nomachine.com/
 BuildRequires:	XFree86-devel
 BuildRequires:	libjpeg-devel
