@@ -1,5 +1,5 @@
-#
 Summary:	NX compression library
+Summary(pl):	Biblioteka kompresji NX
 Name:		nxcomp
 Version:	1.3.2_4
 Release:	1
@@ -10,28 +10,39 @@ URL:		http://www.nomachine.com/
 BuildRequires:	XFree86-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
-BuildRequires:	zlib-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 NX compression library.
 
+%description -l pl
+Biblioteka kompresji NX.
+
 %package devel
-Summary:	Header files and develpment documentation for nxcomp
+Summary:	Header files for nxcomp
+Summary(pl):	Pliki nag³ówkowe nxcomp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
-Files needed for development using nxcomp.
+Header files for nxcomp.
+
+%description devel -l pl
+Pliki nag³ówkowe nxcomp.
 
 %package static
 Summary:	Static nxcomp library
+Summary(pl):	Statyczna biblioteka nxcomp
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Static nxcomp library.
+
+%description static -l pl
+Statyczna biblioteka nxcomp.
 
 %prep
 %setup -q -n %{name}
