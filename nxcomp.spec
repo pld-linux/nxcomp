@@ -1,12 +1,12 @@
 Summary:	NX compression library
 Summary(pl):	Biblioteka kompresji NX
 Name:		nxcomp
-Version:	1.3.2_4
+Version:	1.4.0_31
 Release:	1
 License:	GPL
 Group:		X11/Libraries
-Source0:	http://www.nomachine.com/download/nxsources/%{name}/%{name}-%(echo %{version} | tr _ -).tar.gz
-# Source0-md5:	1790feafa93c3ca58af117ab6f1f5bca
+Source0:	http://www.nomachine.com/download/nxsources/%(echo %{version} | cut -f1 -d_)/%{name}-%(echo %{version} | tr _ -).tar.gz
+# Source0-md5:	c2eb354e141e9f0e81f4cd1673b2a3ae
 URL:		http://www.nomachine.com/
 BuildRequires:	XFree86-devel
 BuildRequires:	libjpeg-devel
@@ -48,8 +48,11 @@ Statyczna biblioteka nxcomp.
 
 %prep
 %setup -q -n %{name}
+sed -i 's/CXXFLAGS="-O3"/CXXFLAGS="%{rpmcflags}"/' configure.in
+sed -i 's/CPPFLAGS="-O3"/CPPFLAGS="%{rpmcflags}"/' configure.in
 
 %build
+%{__autoconf}
 %configure
 %{__make}
 
