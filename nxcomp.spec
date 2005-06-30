@@ -12,10 +12,12 @@ Source0:	http://www.nomachine.com/download/nxsources/%{_version_major}/%{name}-%
 # Source0-md5:	c2eb354e141e9f0e81f4cd1673b2a3ae
 URL:		http://www.nomachine.com/
 BuildRequires:	XFree86-devel
+BuildRequires:	autoconf
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	rpmbuild(macros) >= 1.164
+BuildRequires:	sed >= 4.0
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
