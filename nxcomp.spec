@@ -16,7 +16,6 @@ BuildRequires:	autoconf
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
-BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	sed >= 4.0
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -31,7 +30,7 @@ Biblioteka kompresji NX.
 Summary:	Header files for nxcomp
 Summary(pl):	Pliki nag³ówkowe nxcomp
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for nxcomp.
@@ -43,7 +42,7 @@ Pliki nag³ówkowe nxcomp.
 Summary:	Static nxcomp library
 Summary(pl):	Statyczna biblioteka nxcomp
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static nxcomp library.
