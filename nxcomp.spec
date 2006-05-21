@@ -11,7 +11,7 @@ Group:		X11/Libraries
 Source0:	http://64.34.161.181/download/%{_version_major}/sources/%{name}-%{_version_major}-%{_version_minor}.tar.gz
 # Source0-md5:	782f04870142c9fc5b2e1f654fd0a5d7
 URL:		http://www.nomachine.com/
-BuildRequires:	X11-devel
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	autoconf
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
