@@ -13,12 +13,12 @@ Source0:	http://64.34.161.181/download/%{_version_major}/sources/%{name}-%{_vers
 Patch0:		%{name}-pic.patch
 Patch1:		%{name}-gcc4.patch
 URL:		http://www.nomachine.com/
-BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	autoconf
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	sed >= 4.0
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
