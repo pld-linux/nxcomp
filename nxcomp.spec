@@ -5,7 +5,7 @@ Summary:	NX compression library
 Summary(pl):	Biblioteka kompresji NX
 Name:		nxcomp
 Version:	%{_version_major}.%{_version_minor}
-Release:	3
+Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://64.34.161.181/download/%{_version_major}/sources/%{name}-%{_version_major}-%{_version_minor}.tar.gz
@@ -70,9 +70,9 @@ install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}}
 #%{__make} install \
 #	DESTDIR=$RPM_BUILD_ROOT
 
-cp -a lib*.so* $RPM_BUILD_ROOT%{_libdir}
-install lib*.a $RPM_BUILD_ROOT%{_libdir}
-install NX.h $RPM_BUILD_ROOT%{_includedir}
+cp -a lib*.so*	$RPM_BUILD_ROOT%{_libdir}
+install lib*.a	$RPM_BUILD_ROOT%{_libdir}
+install NX*.h	$RPM_BUILD_ROOT%{_includedir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
