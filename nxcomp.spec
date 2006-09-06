@@ -1,5 +1,5 @@
-%define	_version_major	1.5.0
-%define	_version_minor	80
+%define	_version_major	2.0.0
+%define	_version_minor	81
 
 Summary:	NX compression library
 Summary(pl):	Biblioteka kompresji NX
@@ -9,16 +9,15 @@ Release:	3
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://64.34.161.181/download/%{_version_major}/sources/%{name}-%{_version_major}-%{_version_minor}.tar.gz
-# Source0-md5:	782f04870142c9fc5b2e1f654fd0a5d7
+# Source0-md5:	fa6663ef31787d2a49982450928bf0cd
 Patch0:		%{name}-pic.patch
-Patch1:		%{name}-gcc4.patch
 URL:		http://www.nomachine.com/
 BuildRequires:	autoconf
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	sed >= 4.0
-BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	X11-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,10 +54,9 @@ Statyczna biblioteka nxcomp.
 %prep
 %setup -q -n %{name}
 %patch0 -p1
-%patch1 -p1
 
-sed -i 's/CXXFLAGS="-O3"/CXXFLAGS="%{rpmcflags}"/' configure.in
-sed -i 's/CPPFLAGS="-O3"/CPPFLAGS="%{rpmcflags}"/' configure.in
+sed -i 's/CXXFLAGS="-O3"/CXXFLAGS="%{rpmcxxflags}"/' configure.in
+sed -i 's/CPPFLAGS="-O3"/CPPFLAGS="%{rpmcxxflags}"/' configure.in
 
 %build
 %{__autoconf}
