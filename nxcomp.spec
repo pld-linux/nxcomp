@@ -12,12 +12,12 @@ Source0:	http://64.34.161.181/download/%{_version_major}/sources/%{name}-%{_vers
 # Source0-md5:	fa6663ef31787d2a49982450928bf0cd
 Patch0:		%{name}-pic.patch
 URL:		http://www.nomachine.com/
+BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	sed >= 4.0
-BuildRequires:	X11-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
