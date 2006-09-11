@@ -73,6 +73,7 @@ install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}}
 cp -a lib*.so* $RPM_BUILD_ROOT%{_libdir}
 install lib*.a $RPM_BUILD_ROOT%{_libdir}
 install NX*.h $RPM_BUILD_ROOT%{_includedir}
+install MD5.h $RPM_BUILD_ROOT%{_includedir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
