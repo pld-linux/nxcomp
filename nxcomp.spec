@@ -2,7 +2,7 @@
 %define	_version_minor	81
 
 Summary:	NX compression library
-Summary(pl):	Biblioteka kompresji NX
+Summary(pl.UTF-8):   Biblioteka kompresji NX
 Name:		nxcomp
 Version:	%{_version_major}.%{_version_minor}
 Release:	4
@@ -24,31 +24,31 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 NX compression library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka kompresji NX.
 
 %package devel
 Summary:	Header files for nxcomp
-Summary(pl):	Pliki nag≥Ûwkowe nxcomp
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe nxcomp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for nxcomp.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe nxcomp.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe nxcomp.
 
 %package static
 Summary:	Static nxcomp library
-Summary(pl):	Statyczna biblioteka nxcomp
+Summary(pl.UTF-8):   Statyczna biblioteka nxcomp
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static nxcomp library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka nxcomp.
 
 %prep
