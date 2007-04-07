@@ -1,0 +1,14 @@
+diff -u b.nxcomp/configure.in n.nxcomp/configure.in
+--- b.nxcomp/configure.in	2006-06-19 19:55:55.000000000 +0200
++++ n.nxcomp/configure.in	2007-04-07 20:28:57.000000000 +0200
+@@ -7,8 +7,7 @@
+ 
+ dnl Set our default compilation flags.
+ 
+-CXXFLAGS="-O3 -fno-rtti -fno-exceptions"
+-CFLAGS="-O3"
++CXXFLAGS="$CXXFLAGS -fno-rtti -fno-exceptions"
+ 
+ dnl Reset default linking directives.
+ 
+Only in n.nxcomp: configure.in~

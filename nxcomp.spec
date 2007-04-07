@@ -11,8 +11,9 @@ Group:		X11/Libraries
 Source0:	http://64.34.161.181/download/%{_version_major}/sources/%{name}-%{_version_major}-%{_version_minor}.tar.gz
 # Source0-md5:	ff0d9d7a12940e8761880cfff1eedaef
 Patch0:		%{name}-pic.patch
+Patch1:		%{name}-FLAGS.patch
 URL:		http://www.nomachine.com/
-BuildRequires:	autoconf >= 2.59-9
+BuildRequires:	autoconf >= 2.13
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
@@ -54,13 +55,11 @@ Statyczna biblioteka nxcomp.
 %prep
 %setup -q -n %{name}
 %patch0 -p1
-
-sed -i 's/CXXFLAGS="-O3"/CXXFLAGS="%{rpmcflags}"/' configure.in
-sed -i 's/CPPFLAGS="-O3"/CPPFLAGS="%{rpmcflags}"/' configure.in
+%patch1 -p1
 
 %build
 %{__autoconf}
-%configure
+%configure2_13
 %{__make}
 
 %install
