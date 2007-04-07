@@ -13,7 +13,7 @@ Source0:	http://64.34.161.181/download/%{_version_major}/sources/%{name}-%{_vers
 Patch0:		%{name}-pic.patch
 Patch1:		%{name}-FLAGS.patch
 URL:		http://www.nomachine.com/
-BuildRequires:	autoconf >= 2.13
+BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
@@ -59,7 +59,7 @@ Statyczna biblioteka nxcomp.
 
 %build
 %{__autoconf}
-%configure2_13
+%configure
 %{__make}
 
 %install
