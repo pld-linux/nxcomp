@@ -5,7 +5,7 @@ Summary:	NX compression library
 Summary(pl.UTF-8):	Biblioteka kompresji NX
 Name:		nxcomp
 Version:	%{_version_major}.%{_version_minor}
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://64.34.161.181/download/%{_version_major}/sources/%{name}-%{_version_major}-%{_version_minor}.tar.gz
