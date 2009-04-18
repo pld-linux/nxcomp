@@ -1,5 +1,5 @@
 %define	_version_major	3.3.0
-%define	_version_minor	3
+%define	_version_minor	4
 
 Summary:	NX compression library
 Summary(pl.UTF-8):	Biblioteka kompresji NX
@@ -9,7 +9,7 @@ Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://64.34.161.181/download/%{_version_major}/sources/%{name}-%{_version_major}-%{_version_minor}.tar.gz
-# Source0-md5:	2327cca8e6116fd6a96345566336d81d
+# Source0-md5:	0eb3866f1173767f185a1d62dd51dba0
 Patch0:		%{name}-pic.patch
 Patch1:		%{name}-FLAGS.patch
 URL:		http://www.nomachine.com/
