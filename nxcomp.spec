@@ -5,14 +5,13 @@ Summary:	NX compression library
 Summary(pl.UTF-8):	Biblioteka kompresji NX
 Name:		nxcomp
 Version:	%{_version_major}.%{_version_minor}
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://64.34.161.181/download/%{_version_major}/sources/%{name}-%{_version_major}-%{_version_minor}.tar.gz
 # Source0-md5:	cba926f2b855231a8fc3e0dabff52855
 Patch0:		%{name}-pic.patch
 Patch1:		%{name}-FLAGS.patch
-Patch2:		%{name}-build.patch
 URL:		http://www.nomachine.com/
 BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	libjpeg-devel
@@ -57,7 +56,6 @@ Statyczna biblioteka nxcomp.
 %setup -q -n %{name}
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 %{__autoconf}
