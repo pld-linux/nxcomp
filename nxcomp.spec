@@ -1,15 +1,15 @@
-%define	_version_major	3.4.0
-%define	_version_minor	7
+%define	_version_major	3.5.0
+%define	_version_minor	2
 
 Summary:	NX compression library
 Summary(pl.UTF-8):	Biblioteka kompresji NX
 Name:		nxcomp
 Version:	%{_version_major}.%{_version_minor}
-Release:	4
+Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://64.34.161.181/download/%{_version_major}/sources/%{name}-%{_version_major}-%{_version_minor}.tar.gz
-# Source0-md5:	cba926f2b855231a8fc3e0dabff52855
+# Source0-md5:	ad8c0f133122c6d07732ca69c8759410
 Patch0:		%{name}-pic.patch
 Patch1:		%{name}-FLAGS.patch
 Patch2:		%{name}-libpng15.patch
